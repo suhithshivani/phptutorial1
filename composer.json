@@ -3,6 +3,13 @@
     "description": "A guestbook app",
     "type": "project",
     "license": "MIT",
+    
+    "autoload": {
+        "psr-4": {
+            "Sitepoint\\": "src/"
+        }
+    }, 
+                  
     "require": {
         "catfan/medoo": "^1.6"
     },

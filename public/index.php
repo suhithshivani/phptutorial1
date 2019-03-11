@@ -2,11 +2,19 @@
 
 require '../vendor/autoload.php';
 use Medoo\Medoo;
+use Sitepoint\Comment;
 
 $database = new Medoo([
 'database_type' => 'sqlite',
 'database_file' => '../storage/database.db'
 ]);
+
+
+$comment = new Comment($database);
+$comment->setEmail('bruno@skvorc.me')
+    ->setName('Bruno Skvorc')
+    ->setComment('Hooray! Saving comments works!')
+    ->save();
 
 ?>
 
